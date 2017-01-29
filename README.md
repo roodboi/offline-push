@@ -1,6 +1,6 @@
 # offline-push
 This is just a simple demo proving what we can do with service workers.
-
+![DEMO](/images/demo.gif)
 
 ## Start
 
