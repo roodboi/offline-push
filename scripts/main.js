@@ -102,6 +102,7 @@ function initialiseUI() {
     event.preventDefault()
     if (isSubscribed){
       fetch(`send-all?message=${ this.childNodes[1].value }`, {method: 'get'});
+      this.childNodes[1].value = ''
     }
   });
 
