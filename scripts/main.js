@@ -98,7 +98,7 @@ function unsubscribeUser() {
 }
 
 function initialiseUI() {
-  messageInput.addEventListener('submit', function() {
+  messageInput.addEventListener('submit', function(event) {
     event.preventDefault()
     if (isSubscribed){
       fetch(`send-all?message=${ this.childNodes[1].value }`, {method: 'get'});
