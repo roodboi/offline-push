@@ -1,4 +1,5 @@
 # offline-push
+This is just a simple demo proving what we can do with service workers.
 
 
 ## Start
@@ -30,3 +31,5 @@ https://console.developers.google.com
 https://developers.google.com/cloud-messaging/
 http://caniuse.com/#feat=serviceworkers
 
+## Support
+Currently we are limited to Chrome, Firefox and Android Browsers. IOS is in the works apparently and Im sure support will come soon enough for Desktop Safari and IE. Until then, we can just give the good stuff to those who support it. 
