@@ -23,9 +23,9 @@ function sendNotification(subscription, message) {
   const payload = message
 
   webPush.sendNotification(subscription, payload).then(function() {
-    console.log('NOTIFICATION SENT:'.bold, `"${payload}" `.yellow.inverse, '|', colors.cyan(subscription.endpoint).underline, '\n')
+    console.log('[ NOTIFICATION SENT ] :'.bold, `"${payload}" `.yellow.inverse, '|', colors.cyan(subscription.endpoint).underline, '\n')
   }).catch(function(error) {
-    console.log('ERROR sending notification: ', colors.red(error))
+    console.log('[ ERROR SENDING NOTIFICATION ] : '.bold, colors.red(error))
     subscriptions = _.reject(subscriptions, subscription)
   })
 }
@@ -68,7 +68,7 @@ app.use(function setServiceWorkerHeader(req, res, next) {
 app.post('/register', function(req, res) {
   var subscription = req.body.subscription
   if (!isSubscribed(subscription)) {
-    console.log('SUBSCRIPTION REGISTERED:'.bold, colors.cyan(subscription.endpoint, '\n\n').underline)
+    console.log('[ SUBSCRIPTION REGISTERED ] :'.bold, colors.cyan(subscription.endpoint, '\n\n').underline)
     subscriptions.push(subscription)
   }
   res.type('js').send('{"success":true}')
@@ -78,7 +78,7 @@ app.post('/register', function(req, res) {
 app.post('/unregister', function(req, res) {
   var subscription = req.body
   if (isSubscribed(subscription)) {
-    console.log('SUBSCRIPTION UNREGISTERED:'.bold, colors.cyan(subscription.endpoint))
+    console.log('[ SUBSCRIPTION UNREGISTERED ] :'.bold, colors.cyan(subscription.endpoint))
     subscriptions = _.reject(subscriptions, subscription)
   }
   res.type('js').send('{"success":true}')
@@ -93,5 +93,5 @@ app.get('/send-all', function (req, res) {
 
 app.use(express.static('./'))
 app.listen(7001, function () {
-  console.log('SERVER STARTED'.underline.green, 'PORT:7001', '\n')
+  console.log('[ SERVER STARTED ] :'.green, 'PORT:7001', '\n')
 })

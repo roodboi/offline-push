@@ -30,6 +30,7 @@ https://github.com/web-push-libs
 https://console.developers.google.com
 https://developers.google.com/cloud-messaging/
 http://caniuse.com/#feat=serviceworkers
+https://webkit.org/status/#specification-service-workers
 
 ## Support
 Currently we are limited to Chrome, Firefox and Android Browsers. IOS is in the works apparently and Im sure support will come soon enough for Desktop Safari and IE. Until then, we can just give the good stuff to those who support it. 

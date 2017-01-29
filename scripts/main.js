@@ -66,7 +66,7 @@ function subscribeUser() {
     updateBtn();
   })
   .catch(function(err) {
-    console.log('Failed to subscribe the user: ', err);
+    console.log('Failed to subscribe the user:', err);
     updateBtn();
   });
 }
