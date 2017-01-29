@@ -7,10 +7,10 @@ This is just a simple demo proving what we can do with service workers.
 npm install
 npm start
 
-open localhost:7001/index.html
+open <localhost:7001/index.html>
 enable messaging
 
-hit http://localhost:7001/send-all?message=
+hit <http://localhost:7001/send-all?message=>
 with any message u want to send
 
 CLOSE YOUR BROWSER WINDOW AND IT STILL WORKS!!
