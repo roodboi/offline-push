@@ -16,31 +16,24 @@
 <body>
 
   <header>
-    <h1>PUSH PUSH PUSH</h1>
+    <h1>Push it.</h1>
   </header>
 
   <main>
 
-      <button disabled class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    <form class="js-message-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--accent">
+      <input class="mdl-textfield__input" type="text" id="push-message">
+      <label class="mdl-textfield__label" for="push-message">Send a Message...</label>
+    </form>
+
+    <section>
+      <button disabled class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
         Enable Push Messaging
       </button>
-      <pre><code class="js-subscription-json"></code></pre>
     </section>
   </main>
 
   <script src="scripts/main.js"></script>
   <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCV18xhRnPeCRrswdiQCsoK10GCXamLR3s",
-      authDomain: "offline-notifications-156923.firebaseapp.com",
-      databaseURL: "https://offline-notifications-156923.firebaseio.com",
-      storageBucket: "offline-notifications-156923.appspot.com",
-      messagingSenderId: "343215334560"
-    };
-    firebase.initializeApp(config);
-  </script>
 </body>
 </html>

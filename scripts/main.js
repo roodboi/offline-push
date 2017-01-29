@@ -3,6 +3,7 @@
 const applicationServerPublicKey = 'BMKJVS0IzUBTyOUgEDD_AHFseovd7oA4AqyJYfFJTI0d2hBzBsNQY4ptUSG3LLU_PCXXS5lFbUDY0nMGvIDuGrw';
 
 const pushButton = document.querySelector('.js-push-btn');
+const messageInput = document.querySelector('.js-message-input');
 
 let isSubscribed = false;
 let swRegistration = null;
@@ -97,6 +98,13 @@ function unsubscribeUser() {
 }
 
 function initialiseUI() {
+  messageInput.addEventListener('submit', function() {
+    event.preventDefault()
+    if (isSubscribed){
+      fetch(`send-all?message=${ this.childNodes[1].value }`, {method: 'get'});
+    }
+  });
+
   pushButton.addEventListener('click', function() {
     pushButton.disabled = true;
     if (isSubscribed) {
